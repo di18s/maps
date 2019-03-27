@@ -7,15 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80F007451E8C5A02BDA58210 /* libPods-maps_HolmogorovDmitry_l4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E720E4FE99263138E48F51 /* libPods-maps_HolmogorovDmitry_l4.a */; };
+		E8078D2C224A35140033F61A /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = E8078D2B224A35140033F61A /* cities.json */; };
+		E8078D2F224A363C0033F61A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D2E224A363C0033F61A /* DataManager.m */; };
+		E8078D32224A372B0033F61A /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D30224A372B0033F61A /* LocationService.m */; };
+		E8078D44224B44E70033F61A /* Temperature.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D43224B44E70033F61A /* Temperature.m */; };
 		E80ED109224A235E00EDEC68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E80ED108224A235E00EDEC68 /* AppDelegate.m */; };
 		E80ED10C224A235E00EDEC68 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E80ED10B224A235E00EDEC68 /* ViewController.m */; };
 		E80ED10F224A235E00EDEC68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80ED10D224A235E00EDEC68 /* Main.storyboard */; };
 		E80ED111224A236100EDEC68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80ED110224A236100EDEC68 /* Assets.xcassets */; };
 		E80ED114224A236100EDEC68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80ED112224A236100EDEC68 /* LaunchScreen.storyboard */; };
 		E80ED117224A236100EDEC68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E80ED116224A236100EDEC68 /* main.m */; };
+		E80ED11F224A26C200EDEC68 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = E80ED11E224A26C200EDEC68 /* City.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1092F456E3FD9555AA91ECCC /* Pods-maps_HolmogorovDmitry_l4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-maps_HolmogorovDmitry_l4.release.xcconfig"; path = "Target Support Files/Pods-maps_HolmogorovDmitry_l4/Pods-maps_HolmogorovDmitry_l4.release.xcconfig"; sourceTree = "<group>"; };
+		52C57D533318DDF886D6150E /* Pods-maps_HolmogorovDmitry_l4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-maps_HolmogorovDmitry_l4.debug.xcconfig"; path = "Target Support Files/Pods-maps_HolmogorovDmitry_l4/Pods-maps_HolmogorovDmitry_l4.debug.xcconfig"; sourceTree = "<group>"; };
+		E8078D2B224A35140033F61A /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
+		E8078D2D224A363C0033F61A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		E8078D2E224A363C0033F61A /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		E8078D30224A372B0033F61A /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationService.m; sourceTree = "<group>"; };
+		E8078D31224A372B0033F61A /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
+		E8078D42224B44E70033F61A /* Temperature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Temperature.h; sourceTree = "<group>"; };
+		E8078D43224B44E70033F61A /* Temperature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Temperature.m; sourceTree = "<group>"; };
 		E80ED104224A235E00EDEC68 /* maps_HolmogorovDmitry_l4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maps_HolmogorovDmitry_l4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80ED107224A235E00EDEC68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E80ED108224A235E00EDEC68 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -24,8 +39,10 @@
 		E80ED10E224A235E00EDEC68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E80ED110224A236100EDEC68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E80ED113224A236100EDEC68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E80ED115224A236100EDEC68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E80ED116224A236100EDEC68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E80ED11D224A26C200EDEC68 /* City.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		E80ED11E224A26C200EDEC68 /* City.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		F1E720E4FE99263138E48F51 /* libPods-maps_HolmogorovDmitry_l4.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-maps_HolmogorovDmitry_l4.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +50,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80F007451E8C5A02BDA58210 /* libPods-maps_HolmogorovDmitry_l4.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0BCA971AFC3B0DD44C48EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1E720E4FE99263138E48F51 /* libPods-maps_HolmogorovDmitry_l4.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D18327E14F62585776436C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52C57D533318DDF886D6150E /* Pods-maps_HolmogorovDmitry_l4.debug.xcconfig */,
+				1092F456E3FD9555AA91ECCC /* Pods-maps_HolmogorovDmitry_l4.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E80ED0FB224A235E00EDEC68 = {
 			isa = PBXGroup;
 			children = (
 				E80ED106224A235E00EDEC68 /* maps_HolmogorovDmitry_l4 */,
 				E80ED105224A235E00EDEC68 /* Products */,
+				3D18327E14F62585776436C6 /* Pods */,
+				0C0BCA971AFC3B0DD44C48EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,8 +103,16 @@
 				E80ED10D224A235E00EDEC68 /* Main.storyboard */,
 				E80ED110224A236100EDEC68 /* Assets.xcassets */,
 				E80ED112224A236100EDEC68 /* LaunchScreen.storyboard */,
-				E80ED115224A236100EDEC68 /* Info.plist */,
 				E80ED116224A236100EDEC68 /* main.m */,
+				E8078D31224A372B0033F61A /* LocationService.h */,
+				E8078D30224A372B0033F61A /* LocationService.m */,
+				E8078D2D224A363C0033F61A /* DataManager.h */,
+				E8078D2E224A363C0033F61A /* DataManager.m */,
+				E80ED11D224A26C200EDEC68 /* City.h */,
+				E80ED11E224A26C200EDEC68 /* City.m */,
+				E8078D2B224A35140033F61A /* cities.json */,
+				E8078D42224B44E70033F61A /* Temperature.h */,
+				E8078D43224B44E70033F61A /* Temperature.m */,
 			);
 			path = maps_HolmogorovDmitry_l4;
 			sourceTree = "<group>";
@@ -78,6 +124,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E80ED11A224A236100EDEC68 /* Build configuration list for PBXNativeTarget "maps_HolmogorovDmitry_l4" */;
 			buildPhases = (
+				B20544B0245B1BDAA1CEA93F /* [CP] Check Pods Manifest.lock */,
 				E80ED100224A235E00EDEC68 /* Sources */,
 				E80ED101224A235E00EDEC68 /* Frameworks */,
 				E80ED102224A235E00EDEC68 /* Resources */,
@@ -128,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8078D2C224A35140033F61A /* cities.json in Resources */,
 				E80ED114224A236100EDEC68 /* LaunchScreen.storyboard in Resources */,
 				E80ED111224A236100EDEC68 /* Assets.xcassets in Resources */,
 				E80ED10F224A235E00EDEC68 /* Main.storyboard in Resources */,
@@ -136,13 +184,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B20544B0245B1BDAA1CEA93F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-maps_HolmogorovDmitry_l4-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E80ED100224A235E00EDEC68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8078D44224B44E70033F61A /* Temperature.m in Sources */,
 				E80ED10C224A235E00EDEC68 /* ViewController.m in Sources */,
+				E8078D2F224A363C0033F61A /* DataManager.m in Sources */,
 				E80ED117224A236100EDEC68 /* main.m in Sources */,
+				E80ED11F224A26C200EDEC68 /* City.m in Sources */,
+				E8078D32224A372B0033F61A /* LocationService.m in Sources */,
 				E80ED109224A235E00EDEC68 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +360,7 @@
 		};
 		E80ED11B224A236100EDEC68 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52C57D533318DDF886D6150E /* Pods-maps_HolmogorovDmitry_l4.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +378,7 @@
 		};
 		E80ED11C224A236100EDEC68 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1092F456E3FD9555AA91ECCC /* Pods-maps_HolmogorovDmitry_l4.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
