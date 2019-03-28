@@ -21,7 +21,7 @@ typedef enum DataSourceType {
 
 + (instancetype)sharedInstance;
 - (void)loadData;
-
+-(void)load:(NSString*)urlString withCompletion:(void(^)(id _Nullable result))completion;
 - (City*)cityForIATA:(NSString*)iata;
 - (City*)cityForLocation:(CLLocation*)location;
 

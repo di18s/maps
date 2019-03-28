@@ -1,4 +1,4 @@
-//
+//mapsss
 //  ViewController.m
 //  maps_HolmogorovDmitry_l4
 //
@@ -19,7 +19,7 @@
 @property (nonatomic, strong) UISearchBar *searchBar;
 @property (nonatomic, strong) LocationService *service;
 @property (nonatomic, strong) MKMapView *mapView;
-@property (nonatomic, strong) City *origin;
+@property (nonatomic, assign) CLLocationCoordinate2D origin;
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, strong) MKPointAnnotation* annotation;
 @property (nonatomic, strong) UIImageView* iconWeather;
@@ -81,48 +81,39 @@
     [self.temperatureCity setFont:font];
     [self.temperatureCity setHidden:YES];
     [self.view addSubview:self.temperatureCity];
+    
+    _annotation = [[MKPointAnnotation alloc] init];
 }
+//MARK: - работа с кнопками
 -(void)info{
    [self loadTempWithLat:self.coordinate.latitude lon: self.coordinate.longitude];
     NSString* urlstring = @"https://openweathermap.org/img/w/";
-    NSString* dotUrl = @"png";
-    NSString* dotUrl1 = @".";
+    NSString* ext = @"png";
+    NSString* dotUrl = @".";
 
-    [self.iconWeather yy_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@", urlstring, self.temp.icon, dotUrl1, dotUrl]] options:YYWebImageOptionSetImageWithFadeAnimation];
-    NSLog(@"%@%@%@%@", urlstring, self.temp.icon, dotUrl1, dotUrl);
+    [self.iconWeather yy_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@", urlstring, self.temp.icon, dotUrl, ext]] options:YYWebImageOptionSetImageWithFadeAnimation];
     [self.temperatureCity setText:[NSString stringWithFormat:@"%@°", self.temp.temperature]];
+    
     CLLocation* location = [[CLLocation alloc] initWithLatitude:self.coordinate.latitude longitude:self.coordinate.longitude];
     [self addressFromLocation:location];
+    
     [self.temperatureCity setHidden:NO];
     [self.iconWeather setHidden:NO];
 
-    _annotation = [[MKPointAnnotation alloc] init];
     self.annotation.title = self.titleCity;
-    self.annotation.subtitle =  self.titleCity;;
     self.annotation.coordinate = self.coordinate;
     [self.mapView addAnnotation:self.annotation];
     NSLog(@"info");
 }
 -(void)reduce{
     [self.mapView removeAnnotation:self.annotation];
+    self.iconWeather.image = nil;
     [self.iconWeather setHidden:YES];
+    self.temperatureCity.text = nil;
     [self.temperatureCity setHidden:YES];
     NSLog(@"disinfo");
 }
--(void)loadTempWithLat:(double)lat lon:(double)lon{
-    NSString* api = @"openweathermap.org/data/2.5/weather?";
-    NSString* appid = @"e536bca24d49be2dbc098d36b5e41a74";
-    NSString* url = [NSString stringWithFormat:@"https://api.%@lat=%f&lon=%f&appid=%@", api, lat, lon, appid];
 
-    [self load:url withCompletion:^(id  _Nullable result) {
-        NSDictionary* json = result;
-        self.temp = [[Temperature alloc] initWithTemperature:[[json valueForKey:@"main"] valueForKey:@"temp"] icon:[[json valueForKey:@"weather"][0] valueForKey:@"icon"]];
-        NSLog(@"temperature - %@", self.temp.temperature);
-        NSLog(@"%d",(int)[[json valueForKey:@"main"] valueForKey:@"temp"]);
-        NSLog(@"icon - %@", self.temp.icon);
-
-    }];
-}
 - (void)dataLoadedSuccessfully {
     _service = [[LocationService alloc] init];
 }
@@ -134,8 +125,12 @@
     [_mapView setRegion:region];
     
     if (currentLocation) {
-        _origin = [[DataManager sharedInstance]cityForLocation:currentLocation];
-        [self loadTempWithLat:self.origin.coordinate.latitude lon: self.origin.coordinate.longitude];
+        self.coordinate = currentLocation.coordinate;
+        self.origin = currentLocation.coordinate;
+        [self addressFromLocation:currentLocation];
+        [self loadTempWithLat:self.coordinate.latitude lon: self.coordinate.longitude];
+        self.annotation.title = self.titleCity;
+        self.annotation.coordinate = self.coordinate;
     }
 }
 //MARK: - geocoder
@@ -145,7 +140,9 @@
     [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         
         if ([placemarks count] > 0) {
-            self.titleCity = [placemarks lastObject].name;
+            self.titleCity = [placemarks firstObject].name;
+
+            
         }
     }];
 }
@@ -154,7 +151,7 @@
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     [geocoder geocodeAddressString:address completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         if ([placemarks count] > 0) {
-            CLPlacemark *placemark = [placemarks lastObject];
+            CLPlacemark *placemark = [placemarks firstObject];
             self.coordinate = placemark.location.coordinate;
         }
     }];
@@ -168,21 +165,25 @@
 }
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     [self locationFromAddress:searchText];
+    [self loadTempWithLat:self.coordinate.latitude lon:self.coordinate.longitude];
+    self.annotation.title = self.titleCity;
+    self.annotation.coordinate = self.coordinate;
     if ([searchText isEqualToString:@""]) {
-        self.coordinate = self.origin.coordinate;
+        self.coordinate = self.origin;
+        [self reduce];
     }
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.coordinate, 100000, 100000);
-    
     [_mapView setRegion:region];
 }
 
--(void)load:(NSString*)urlString withCompletion:(void(^)(id _Nullable result))completion{
-    NSURLSession* session = [NSURLSession sharedSession];
-    
-    NSURLSessionTask* task = [session dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        id serialization = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        completion(serialization);
+//MARK: - datamanager
+-(void)loadTempWithLat:(double)lat lon:(double)lon{
+    NSString* api = @"openweathermap.org/data/2.5/weather?";
+    NSString* appid = @"e536bca24d49be2dbc098d36b5e41a74";
+    NSString* url = [NSString stringWithFormat:@"https://api.%@lat=%f&lon=%f&appid=%@", api, lat, lon, appid];
+    [[DataManager sharedInstance] load:url withCompletion:^(id  _Nullable result) {
+        NSDictionary* json = result;
+        self.temp = [[Temperature alloc] initWithTemperature:[[json valueForKey:@"main"] valueForKey:@"temp"] icon:[[json valueForKey:@"weather"][0] valueForKey:@"icon"]];
     }];
-    [task resume];
 }
 @end

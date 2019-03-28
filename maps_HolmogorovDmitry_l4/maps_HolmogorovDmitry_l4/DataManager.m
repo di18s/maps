@@ -36,6 +36,16 @@
     });
 }
 
+-(void)load:(NSString*)urlString withCompletion:(void(^)(id _Nullable result))completion{
+    NSURLSession* session = [NSURLSession sharedSession];
+    
+    NSURLSessionTask* task = [session dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        id serialization = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        completion(serialization);
+    }];
+    [task resume];
+}
+
 - (NSMutableArray *)createObjectsFromArray:(NSArray *)array withType:(DataSourceType)type {
     NSMutableArray *results = [NSMutableArray new];
     
