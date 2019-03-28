@@ -36,9 +36,12 @@
     [self.view setBackgroundColor:UIColor.orangeColor];
     
     [self searchBarSetup];
+    UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKB)];
+    [self.view addGestureRecognizer:tapRecognizer];
     
     _mapView = [[MKMapView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _mapView.showsUserLocation = true;
+    
     MKScaleView* scale = [[MKScaleView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 80, self.view.bounds.size.width - 290, 30, 30)];
     [scale scaleVisibility];
     [scale mapView];
@@ -174,6 +177,11 @@
     }
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.coordinate, 100000, 100000);
     [_mapView setRegion:region];
+}
+
+-(void)hideKB{
+    [self.searchBar endEditing:YES];
+    NSLog(@"kb hidden");
 }
 
 //MARK: - datamanager

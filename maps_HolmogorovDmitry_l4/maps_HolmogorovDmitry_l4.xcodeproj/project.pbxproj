@@ -71,7 +71,6 @@
 				52C57D533318DDF886D6150E /* Pods-maps_HolmogorovDmitry_l4.debug.xcconfig */,
 				1092F456E3FD9555AA91ECCC /* Pods-maps_HolmogorovDmitry_l4.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -366,6 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6T5J3J8NFX;
 				INFOPLIST_FILE = maps_HolmogorovDmitry_l4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,6 +384,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6T5J3J8NFX;
 				INFOPLIST_FILE = maps_HolmogorovDmitry_l4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
