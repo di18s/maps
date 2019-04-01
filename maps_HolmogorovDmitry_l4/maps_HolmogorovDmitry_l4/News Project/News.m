@@ -6,9 +6,9 @@
 //  Copyright © 2019 Dmitry. All rights reserved.
 //
 
-#import "Photo.h"
+#import "News.h"
 
-@implementation Photo
+@implementation News
 -(instancetype)initWithDictionary:(NSDictionary*)dictionary{
     if (self = [super init]){
         if ([dictionary valueForKey:@"title"] && ![[dictionary valueForKey:@"title"] isEqual:[NSNull null]]) {

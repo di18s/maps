@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PhotoCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) UIImageView* imageNews;
-@property (nonatomic, strong) UILabel* titleNews;
+@property (nonatomic, strong) UIImageView* imagePhoto;
+@property (nonatomic, strong) UILabel* titlePhoto;
 @end
 
 NS_ASSUME_NONNULL_END

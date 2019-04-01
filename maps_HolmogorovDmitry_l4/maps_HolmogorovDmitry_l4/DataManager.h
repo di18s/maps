@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "City.h"
 
 #define kDataManagerLoadDataDidComplete @"kDataManagerLoadDataDidComplete"
 
@@ -17,13 +16,11 @@ typedef enum DataSourceType {
 
 @interface DataManager : NSObject
 
-@property (nonatomic, strong, readonly) NSArray *cities;
 
-+ (instancetype)sharedInstance;
++ (instancetype _Nonnull )sharedInstance;
 - (void)loadData;
--(void)load:(NSString*)urlString withCompletion:(void(^)(id _Nullable result))completion;
-- (City*)cityForIATA:(NSString*)iata;
-- (City*)cityForLocation:(CLLocation*)location;
+-(void)load:(NSString*_Nonnull)urlString withCompletion:(void(^_Nonnull)(id _Nullable result))completion;
+
 
 @end
 

@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Photo : NSObject
-@property (nonatomic, strong) NSString* imageNews;
-@property (nonatomic, strong) NSString* titleNews;
-@property (nonatomic, strong) NSString* descNews;
+@property (nonatomic, strong) UIImage* image_Photo;
+@property (nonatomic, strong) NSString* title_Photo;
+-(instancetype)initWithPhoto:(UIImage*)photo andTitle:(NSString*)title;
 @end
 
 NS_ASSUME_NONNULL_END

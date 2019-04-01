@@ -7,36 +7,22 @@
 //
 
 #import "PhotoCollectionViewCell.h"
-#import "NewsTitleViewController.h"
+#import "PhotoViewController.h"
 
 @implementation PhotoCollectionViewCell
-
-//-(instancetype)init
-//{
-//    self = [super init];
-//    if (self){
-//        _imageNews = [[UIImageView alloc] initWithFrame:CGRectMake(self.contentView.frame.origin.x + 5, self.contentView.frame.origin.y / 2 - 140, 300, 280)];
-//        self.imageNews.layer.cornerRadius = 15;
-//        [self.contentView addSubview:_imageNews];
-//
-//        _titleNews = [[UILabel alloc] initWithFrame:CGRectMake(310, self.contentView.frame.origin.y / 2 - 140, self.contentView.frame.size.width - 310, 280)];
-//        [self.contentView addSubview:_titleNews];
-//
-//    }
-//    return self;
-//}
-
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
 	self = [super initWithFrame:frame];
 	if (self){
-		_imageNews = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 50, 50)];
-		_imageNews.layer.cornerRadius = 15;
-		[self.contentView addSubview:_imageNews];
+		_imagePhoto = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 80)];
+		_imagePhoto.layer.cornerRadius = 10;
+        self.imagePhoto.clipsToBounds = YES;
+		[self.contentView addSubview:_imagePhoto];
 		
-		_titleNews = [[UILabel alloc] initWithFrame:CGRectMake(60, 5, self.contentView.frame.size.width - 75, 50)];
-		[self.contentView addSubview:_titleNews];
+		_titlePhoto = [[UILabel alloc] initWithFrame:CGRectMake(0, 81, 100, 19)];
+        [self.titlePhoto setTextAlignment:NSTextAlignmentCenter];
+		[self.contentView addSubview:_titlePhoto];
 	}
 	return self;
 }

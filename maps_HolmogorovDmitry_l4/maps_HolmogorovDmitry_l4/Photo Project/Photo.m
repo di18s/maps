@@ -9,11 +9,10 @@
 #import "Photo.h"
 
 @implementation Photo
--(instancetype)init{
+-(instancetype)initWithPhoto:(UIImage*)photo andTitle:(NSString*)title{
     if (self = [super init]){
-        _titleNews = @"title";
-        _descNews = @"description news";
-        _imageNews = @"url for news image";
+        _title_Photo = title;
+        _image_Photo = photo;
     
     }
     return self;

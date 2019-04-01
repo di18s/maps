@@ -6,14 +6,14 @@
 //  Copyright © 2019 Dmitry. All rights reserved.
 //
 
-#import "PhotoTitleViewController.h"
+#import "NewsTitleViewController.h"
 #import "NewsDescriptionViewController.h"
-#import "Photo.h"
+#import "News.h"
 #import "NewsTableViewCell.h"
 #import <YYWebImage/YYWebImage.h>
 #define NewsImage(iata) [NSURL URLWithString: iata];
 
-@interface PhotoTitleViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface NewsTitleViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray* businessArray;
 @property (nonatomic, strong) NSMutableArray* sportsArray;
 @property (nonatomic, strong) NSMutableArray* scienceArray;
@@ -27,7 +27,7 @@
 @property (nonatomic, strong) NSArray* urlNews;
 @end
 
-@implementation PhotoTitleViewController
+@implementation NewsTitleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -105,7 +105,7 @@
         NSDictionary* json = result;
         self.businessArray = [NSMutableArray new];
         for (NSDictionary *i in [json objectForKey:@"articles"]){
-            Photo* news = [[Photo alloc] initWithDictionary:i];
+            News* news = [[News alloc] initWithDictionary:i];
             [self.businessArray addObject:news];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -117,7 +117,7 @@
         NSDictionary* json = result;
         self.entertainment = [NSMutableArray new];
         for (NSDictionary *i in [json objectForKey:@"articles"]){
-            Photo* news = [[Photo alloc] initWithDictionary:i];
+            News* news = [[News alloc] initWithDictionary:i];
             [self.entertainment addObject:news];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -129,7 +129,7 @@
         NSDictionary* json = result;
         self.sportsArray = [NSMutableArray new];
         for (NSDictionary *i in [json objectForKey:@"articles"]){
-            Photo* news = [[Photo alloc] initWithDictionary:i];
+            News* news = [[News alloc] initWithDictionary:i];
             [self.sportsArray addObject:news];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -141,7 +141,7 @@
         NSDictionary* json = result;
         self.scienceArray = [NSMutableArray new];
         for (NSDictionary *i in [json objectForKey:@"articles"]){
-            Photo* news = [[Photo alloc] initWithDictionary:i];
+            News* news = [[News alloc] initWithDictionary:i];
             [self.scienceArray addObject:news];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -153,7 +153,7 @@
         NSDictionary* json = result;
         self.healthArray = [NSMutableArray new];
         for (NSDictionary *i in [json objectForKey:@"articles"]){
-            Photo* news = [[Photo alloc] initWithDictionary:i];
+            News* news = [[News alloc] initWithDictionary:i];
             [self.healthArray addObject:news];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -165,7 +165,7 @@
         NSDictionary* json = result;
         self.technologyArray = [NSMutableArray new];
         for (NSDictionary *i in [json objectForKey:@"articles"]){
-            Photo* news = [[Photo alloc] initWithDictionary:i];
+            News* news = [[News alloc] initWithDictionary:i];
             [self.technologyArray addObject:news];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -177,7 +177,7 @@
         NSDictionary* json = result;
         self.newsArray = [NSMutableArray new];
         for (NSDictionary *i in [json objectForKey:@"articles"]){
-            Photo* news = [[Photo alloc] initWithDictionary:i];
+            News* news = [[News alloc] initWithDictionary:i];
             [self.newsArray addObject:news];
         }
     }];
