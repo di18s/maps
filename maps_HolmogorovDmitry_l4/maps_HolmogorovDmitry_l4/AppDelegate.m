@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "Photo Project/PhotoViewController.h"
+#import "TabBarController.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +21,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UIViewController *vc = [ViewController new];
-    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    _window.rootViewController = nav;
+    
+    
+    TabBarController * tabBC = [[TabBarController alloc] init];
+//    UIViewController *vc = [ViewController new];
+//    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    _window.rootViewController = tabBC;
     [_window makeKeyAndVisible];
     
     return YES;

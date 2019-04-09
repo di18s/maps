@@ -8,29 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		80F007451E8C5A02BDA58210 /* libPods-maps_HolmogorovDmitry_l4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E720E4FE99263138E48F51 /* libPods-maps_HolmogorovDmitry_l4.a */; };
-		E8078D2C224A35140033F61A /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = E8078D2B224A35140033F61A /* cities.json */; };
 		E8078D2F224A363C0033F61A /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D2E224A363C0033F61A /* DataManager.m */; };
 		E8078D32224A372B0033F61A /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D30224A372B0033F61A /* LocationService.m */; };
 		E8078D44224B44E70033F61A /* Temperature.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D43224B44E70033F61A /* Temperature.m */; };
+		E8078D472251DDD40033F61A /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D462251DDD40033F61A /* TabBarController.m */; };
+		E8078D5E2251E4390033F61A /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D572251E4390033F61A /* News.m */; };
+		E8078D5F2251E4390033F61A /* NewsDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D5A2251E4390033F61A /* NewsDescriptionViewController.m */; };
+		E8078D602251E4390033F61A /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D5C2251E4390033F61A /* NewsTableViewCell.m */; };
+		E8078D612251E4390033F61A /* NewsTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D5D2251E4390033F61A /* NewsTitleViewController.m */; };
+		E8078D692251EC4E0033F61A /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D642251EC4D0033F61A /* Photo.m */; };
+		E8078D6A2251EC4E0033F61A /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D652251EC4E0033F61A /* PhotoCollectionViewCell.m */; };
+		E8078D6B2251EC4E0033F61A /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8078D672251EC4E0033F61A /* PhotoViewController.m */; };
 		E80ED109224A235E00EDEC68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E80ED108224A235E00EDEC68 /* AppDelegate.m */; };
 		E80ED10C224A235E00EDEC68 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E80ED10B224A235E00EDEC68 /* ViewController.m */; };
 		E80ED10F224A235E00EDEC68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80ED10D224A235E00EDEC68 /* Main.storyboard */; };
 		E80ED111224A236100EDEC68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80ED110224A236100EDEC68 /* Assets.xcassets */; };
 		E80ED114224A236100EDEC68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80ED112224A236100EDEC68 /* LaunchScreen.storyboard */; };
 		E80ED117224A236100EDEC68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E80ED116224A236100EDEC68 /* main.m */; };
-		E80ED11F224A26C200EDEC68 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = E80ED11E224A26C200EDEC68 /* City.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1092F456E3FD9555AA91ECCC /* Pods-maps_HolmogorovDmitry_l4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-maps_HolmogorovDmitry_l4.release.xcconfig"; path = "Target Support Files/Pods-maps_HolmogorovDmitry_l4/Pods-maps_HolmogorovDmitry_l4.release.xcconfig"; sourceTree = "<group>"; };
 		52C57D533318DDF886D6150E /* Pods-maps_HolmogorovDmitry_l4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-maps_HolmogorovDmitry_l4.debug.xcconfig"; path = "Target Support Files/Pods-maps_HolmogorovDmitry_l4/Pods-maps_HolmogorovDmitry_l4.debug.xcconfig"; sourceTree = "<group>"; };
-		E8078D2B224A35140033F61A /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		E8078D2D224A363C0033F61A /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		E8078D2E224A363C0033F61A /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		E8078D30224A372B0033F61A /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationService.m; sourceTree = "<group>"; };
 		E8078D31224A372B0033F61A /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
 		E8078D42224B44E70033F61A /* Temperature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Temperature.h; sourceTree = "<group>"; };
 		E8078D43224B44E70033F61A /* Temperature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Temperature.m; sourceTree = "<group>"; };
+		E8078D452251DDD40033F61A /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		E8078D462251DDD40033F61A /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		E8078D562251E4390033F61A /* NewsTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTitleViewController.h; sourceTree = "<group>"; };
+		E8078D572251E4390033F61A /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		E8078D582251E4390033F61A /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		E8078D592251E4390033F61A /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		E8078D5A2251E4390033F61A /* NewsDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDescriptionViewController.m; sourceTree = "<group>"; };
+		E8078D5B2251E4390033F61A /* NewsDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDescriptionViewController.h; sourceTree = "<group>"; };
+		E8078D5C2251E4390033F61A /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		E8078D5D2251E4390033F61A /* NewsTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTitleViewController.m; sourceTree = "<group>"; };
+		E8078D632251EC4D0033F61A /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		E8078D642251EC4D0033F61A /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		E8078D652251EC4E0033F61A /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		E8078D662251EC4E0033F61A /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		E8078D672251EC4E0033F61A /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		E8078D682251EC4E0033F61A /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		E80ED104224A235E00EDEC68 /* maps_HolmogorovDmitry_l4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maps_HolmogorovDmitry_l4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80ED107224A235E00EDEC68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E80ED108224A235E00EDEC68 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,8 +61,6 @@
 		E80ED110224A236100EDEC68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E80ED113224A236100EDEC68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E80ED116224A236100EDEC68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E80ED11D224A26C200EDEC68 /* City.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
-		E80ED11E224A26C200EDEC68 /* City.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		F1E720E4FE99263138E48F51 /* libPods-maps_HolmogorovDmitry_l4.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-maps_HolmogorovDmitry_l4.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,6 +93,47 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E8078D482251E0FE0033F61A /* News Project */ = {
+			isa = PBXGroup;
+			children = (
+				E8078D592251E4390033F61A /* News.h */,
+				E8078D572251E4390033F61A /* News.m */,
+				E8078D5B2251E4390033F61A /* NewsDescriptionViewController.h */,
+				E8078D5A2251E4390033F61A /* NewsDescriptionViewController.m */,
+				E8078D582251E4390033F61A /* NewsTableViewCell.h */,
+				E8078D5C2251E4390033F61A /* NewsTableViewCell.m */,
+				E8078D562251E4390033F61A /* NewsTitleViewController.h */,
+				E8078D5D2251E4390033F61A /* NewsTitleViewController.m */,
+			);
+			path = "News Project";
+			sourceTree = "<group>";
+		};
+		E8078D492251E1360033F61A /* Maps Project */ = {
+			isa = PBXGroup;
+			children = (
+				E80ED10A224A235E00EDEC68 /* ViewController.h */,
+				E80ED10B224A235E00EDEC68 /* ViewController.m */,
+				E8078D31224A372B0033F61A /* LocationService.h */,
+				E8078D30224A372B0033F61A /* LocationService.m */,
+				E8078D42224B44E70033F61A /* Temperature.h */,
+				E8078D43224B44E70033F61A /* Temperature.m */,
+			);
+			path = "Maps Project";
+			sourceTree = "<group>";
+		};
+		E8078D622251EB580033F61A /* Photo Project */ = {
+			isa = PBXGroup;
+			children = (
+				E8078D662251EC4E0033F61A /* Photo.h */,
+				E8078D642251EC4D0033F61A /* Photo.m */,
+				E8078D632251EC4D0033F61A /* PhotoCollectionViewCell.h */,
+				E8078D652251EC4E0033F61A /* PhotoCollectionViewCell.m */,
+				E8078D682251EC4E0033F61A /* PhotoViewController.h */,
+				E8078D672251EC4E0033F61A /* PhotoViewController.m */,
+			);
+			path = "Photo Project";
+			sourceTree = "<group>";
+		};
 		E80ED0FB224A235E00EDEC68 = {
 			isa = PBXGroup;
 			children = (
@@ -95,23 +155,19 @@
 		E80ED106224A235E00EDEC68 /* maps_HolmogorovDmitry_l4 */ = {
 			isa = PBXGroup;
 			children = (
+				E8078D622251EB580033F61A /* Photo Project */,
+				E8078D492251E1360033F61A /* Maps Project */,
+				E8078D482251E0FE0033F61A /* News Project */,
 				E80ED107224A235E00EDEC68 /* AppDelegate.h */,
 				E80ED108224A235E00EDEC68 /* AppDelegate.m */,
-				E80ED10A224A235E00EDEC68 /* ViewController.h */,
-				E80ED10B224A235E00EDEC68 /* ViewController.m */,
 				E80ED10D224A235E00EDEC68 /* Main.storyboard */,
 				E80ED110224A236100EDEC68 /* Assets.xcassets */,
 				E80ED112224A236100EDEC68 /* LaunchScreen.storyboard */,
 				E80ED116224A236100EDEC68 /* main.m */,
-				E8078D31224A372B0033F61A /* LocationService.h */,
-				E8078D30224A372B0033F61A /* LocationService.m */,
 				E8078D2D224A363C0033F61A /* DataManager.h */,
 				E8078D2E224A363C0033F61A /* DataManager.m */,
-				E80ED11D224A26C200EDEC68 /* City.h */,
-				E80ED11E224A26C200EDEC68 /* City.m */,
-				E8078D2B224A35140033F61A /* cities.json */,
-				E8078D42224B44E70033F61A /* Temperature.h */,
-				E8078D43224B44E70033F61A /* Temperature.m */,
+				E8078D452251DDD40033F61A /* TabBarController.h */,
+				E8078D462251DDD40033F61A /* TabBarController.m */,
 			);
 			path = maps_HolmogorovDmitry_l4;
 			sourceTree = "<group>";
@@ -174,7 +230,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8078D2C224A35140033F61A /* cities.json in Resources */,
 				E80ED114224A236100EDEC68 /* LaunchScreen.storyboard in Resources */,
 				E80ED111224A236100EDEC68 /* Assets.xcassets in Resources */,
 				E80ED10F224A235E00EDEC68 /* Main.storyboard in Resources */,
@@ -215,10 +270,17 @@
 			files = (
 				E8078D44224B44E70033F61A /* Temperature.m in Sources */,
 				E80ED10C224A235E00EDEC68 /* ViewController.m in Sources */,
+				E8078D692251EC4E0033F61A /* Photo.m in Sources */,
+				E8078D6A2251EC4E0033F61A /* PhotoCollectionViewCell.m in Sources */,
 				E8078D2F224A363C0033F61A /* DataManager.m in Sources */,
+				E8078D5F2251E4390033F61A /* NewsDescriptionViewController.m in Sources */,
 				E80ED117224A236100EDEC68 /* main.m in Sources */,
-				E80ED11F224A26C200EDEC68 /* City.m in Sources */,
+				E8078D472251DDD40033F61A /* TabBarController.m in Sources */,
+				E8078D612251E4390033F61A /* NewsTitleViewController.m in Sources */,
+				E8078D602251E4390033F61A /* NewsTableViewCell.m in Sources */,
+				E8078D6B2251EC4E0033F61A /* PhotoViewController.m in Sources */,
 				E8078D32224A372B0033F61A /* LocationService.m in Sources */,
+				E8078D5E2251E4390033F61A /* News.m in Sources */,
 				E80ED109224A235E00EDEC68 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
